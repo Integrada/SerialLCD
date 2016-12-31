@@ -22,7 +22,7 @@ void SerialLCD_Clear();
 void SerialLCD_PutChar(unsigned char, unsigned char, char);
 void SerialLCD_PutCharPosition(char);
 void SerialLCD_Write(unsigned char, unsigned char, char *);
-void SerialLCD_CreateChar(unsigned char, unsigned char[]);
+void SerialLCD_CreateChar(unsigned char, unsigned char *);
 void SerialLCD_PutCustomChar(unsigned char, unsigned char, unsigned char);
 
 #endif

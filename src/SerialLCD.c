@@ -1,4 +1,4 @@
-#include "LCD.h"
+#include "SerialLCD.h"
 
 const unsigned char ROW_ADDRESS[] = { 128, 192, 148, 212 };
 
@@ -34,7 +34,7 @@ void SerialLCD_PutCharPosition(char character)
   UART1_Write(character);
 }
 
-void SerialLCD_Write(unsigned char row, unsigned char col, char *text)
+void SerialLCD_Write(unsigned char row, unsigned char col, char * text)
 {
   UART1_Write(SERIAL_LCD_START);
   UART1_Write(ROW_ADDRESS[row] + col);
@@ -46,7 +46,7 @@ void SerialLCD_Write(unsigned char row, unsigned char col, char *text)
   delay_ms(5);
 }
 
-void SerialLCD_CreateChar(unsigned char location, unsigned char map[])
+void SerialLCD_CreateChar(unsigned char location, unsigned char * map)
 {
   char i;
   location &= 0x07;
